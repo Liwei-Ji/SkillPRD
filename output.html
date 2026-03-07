@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRD Pitch Deck: [Project Name]</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #111111;
+            --accent: #3b82f6;
+            --muted: rgba(17, 17, 17, 0.6);
+            --border: #f0f0f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+        }
+
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 24px;
+            color: var(--fg);
+            font-weight: 700;
+        }
+
+        p {
+            font-size: clamp(18px, 2vw, 22px);
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            color: #4b5563;
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        li {
+            font-size: 20px;
+            margin: 12px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 1100px;
+            margin-top: 20px;
+        }
+
+        .flow-card {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+        }
+
+        .flow-card h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .flow-card p {
+            font-size: 14px;
+            margin-bottom: 0;
+            color: var(--fg);
+            line-height: 1.4;
+        }
+
+        .hint {
+            position: fixed;
+            bottom: 30px;
+            font-size: 14px;
+            color: var(--muted);
+            animation: bounce 2s infinite;
+            z-index: 100;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Professional UI Elements */
+        .metric-box {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #eef2ff;
+            color: #3730a3;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .quote-block {
+            font-style: italic;
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+            text-align: left;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Slide 1: Product Overview -->
+        <section>
+            <div class="tag">[Category]</div>
+            <h1 style="color: var(--accent); font-weight: 800;">[Project Name]</h1>
+            <p>[High-level vision or product tagline]</p>
+            <div class="hint">Scroll to explore the pitch deck blueprint</div>
+        </section>
+
+        <!-- Slide 2: Background -->
+        <section>
+            <h2>Clinical/Market Challenge</h2>
+            <p>[Brief description of the problem being solved]</p>
+            <div class="metric-box">
+                <div class="metric"><span class="metric-value">[Value]</span><span class="metric-label">[Label]</span>
+                </div>
+                <div class="metric"><span class="metric-value">[Value]</span><span class="metric-label">[Label]</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Target Users -->
+        <section>
+            <h2>Target Audience</h2>
+            <p>[Summary of who this is for]</p>
+            <ul>
+                <li><strong>[Segment A]</strong>: [Key benefit for this segment]</li>
+                <li><strong>[Segment B]</strong>: [Key benefit for this segment]</li>
+                <li><strong>[Segment C]</strong>: [Key benefit for this segment]</li>
+            </ul>
+        </section>
+
+        <!-- Slide 4: Goals/KPIs -->
+        <section>
+            <h2>Measurable Goals</h2>
+            <div class="flow-grid" style="max-width: 800px;">
+                <div class="flow-card">
+                    <h3>Efficiency</h3>
+                    <p>[KPI 1]</p>
+                </div>
+                <div class="flow-card">
+                    <h3>Accuracy</h3>
+                    <p>[KPI 2]</p>
+                </div>
+                <div class="flow-card">
+                    <h3>Impact</h3>
+                    <p>[KPI 3]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: User Flow (Stage 1-5) -->
+        <section>
+            <h2>Interactive Flow</h2>
+            <div class="flow-grid">
+                <div class="flow-card">
+                    <h3>01. [Step]</h3>
+                    <p>[Action Description]</p>
+                </div>
+                <div class="flow-card">
+                    <h3>02. [Step]</h3>
+                    <p>[Action Description]</p>
+                </div>
+                <div class="flow-card">
+                    <h3>03. [Step]</h3>
+                    <p>[Action Description]</p>
+                </div>
+                <div class="flow-card">
+                    <h3>04. [Step]</h3>
+                    <p>[Action Description]</p>
+                </div>
+                <div class="flow-card">
+                    <h3>05. [Step]</h3>
+                    <p>[Action Description]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Interaction Loop -->
+        <section>
+            <h2>Interaction Philosophy</h2>
+            <p>[Describe the AI-First, Human-Failsafe logic]</p>
+            <div class="quote-block">"As a user, I want [action], so that [outcome]."</div>
+        </section>
+
+        <!-- Slide 7: Functional Requirements -->
+        <section>
+            <h2>Core Features</h2>
+            <ul>
+                <li><strong>[Feature 1]</strong>: [Acceptance Criteria]</li>
+                <li><strong>[Feature 2]</strong>: [Acceptance Criteria]</li>
+                <li><strong>[Feature 3]</strong>: [Acceptance Criteria]</li>
+            </ul>
+        </section>
+
+        <!-- Slide 8: Non-Functional Reqs -->
+        <section>
+            <h2>Standards & Constraints</h2>
+            <div class="flow-grid" style="max-width: 700px;">
+                <div class="flow-card">
+                    <h3>Performance</h3>
+                    <p>[Latency/Speed]</p>
+                </div>
+                <div class="flow-card">
+                    <h3>Security</h3>
+                    <p>[Encryption/Compliance]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: User Stories -->
+        <section>
+            <h2>Voice of the User</h2>
+            <div class="quote-block">[Strict format user story 1]</div>
+            <div class="quote-block" style="border-left-color: #cbd5e1;">[Strict format user story 2]</div>
+        </section>
+
+        <!-- Slide 10: Edge Cases -->
+        <section>
+            <h2>Reliability & Safeguards</h2>
+            <ul>
+                <li><strong>[Scenario 1]</strong>: [Fallback behavior]</li>
+                <li><strong>[Scenario 2]</strong>: [Fallback behavior]</li>
+            </ul>
+        </section>
+
+        <!-- Slide 11: Out of Scope -->
+        <section>
+            <h2>Version 1 Scope</h2>
+            <p>Maintaining focus on core product value.</p>
+            <ul>
+                <li>[Excluded Item 1]</li>
+                <li>[Excluded Item 2]</li>
+                <li>[Excluded Item 3]</li>
+            </ul>
+        </section>
+
+        <!-- Slide 12: Thank You -->
+        <section>
+            <h1 style="color: var(--accent);">Thank You</h1>
+            <p>[Closing mission statement]</p>
+            <p style="font-size: 14px; margin-top: 40px;">PRD Pitch Deck Blueprint v1.0</p>
+        </section>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const hint = document.querySelector('.hint');
+        container.addEventListener('scroll', () => {
+            const isAtBottom = container.scrollHeight - container.scrollTop <= container.clientHeight + 50;
+            hint.style.display = isAtBottom ? 'none' : 'block';
+        });
+    </script>
+</body>
+
+</html>

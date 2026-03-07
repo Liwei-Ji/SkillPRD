@@ -1,0 +1,10 @@
+product_idea: "" # Example: DISE AI Agent - An intelligent platform for DISE video analysis.
+target_user: "" # Example: ENT physicians and sleep specialists.
+core_problem: "" # Example: Manual identification is subjective and inefficient.
+key_features: # Use - name: and description: format
+  - name: ""
+    description: ""
+user_flow: "" # Example: 1. Upload -> 2. Select Time -> 3. AI Scan -> 4. Review
+success_goals: "" # Example: Reduce review time by 70%
+constraints: "" # Example: MP4 format, 10-90s limit
+selected_style: "Pitch Deck" # Options: Clean Pro, Blueprint, Pitch Deck, UX Spec

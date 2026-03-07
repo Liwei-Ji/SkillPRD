@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRD Pitch Deck: DISE AI Agent</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #111111;
+            --accent: #3b82f6;
+            --muted: rgba(17, 17, 17, 0.6);
+            --border: #f0f0f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+        }
+
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 24px;
+            color: var(--fg);
+            font-weight: 700;
+        }
+
+        p {
+            font-size: clamp(18px, 2vw, 22px);
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            color: #4b5563;
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        li {
+            font-size: 20px;
+            margin: 12px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 1100px;
+            margin-top: 20px;
+        }
+
+        .flow-card {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+        }
+
+        .flow-card h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .flow-card p {
+            font-size: 14px;
+            margin-bottom: 0;
+            color: var(--fg);
+            line-height: 1.4;
+        }
+
+        .hint {
+            position: fixed;
+            bottom: 30px;
+            font-size: 14px;
+            color: var(--muted);
+            animation: bounce 2s infinite;
+            z-index: 100;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .metric-box {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #eef2ff;
+            color: #3730a3;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 1. Product Overview -->
+        <section>
+            <div class="tag">AI MEDICINE</div>
+            <h1 style="color: var(--accent); font-weight: 800;">DISE AI Agent</h1>
+            <p style="font-size: 24px;">Transforming subjective sleep endoscopy into objective, quantitative clinical
+                intelligence.</p>
+            <div class="hint">Scroll down to explore the PRD Specification</div>
+        </section>
+
+        <!-- 2. Background & Problem -->
+        <section>
+            <h2>Clinical Subjectivity</h2>
+            <p>Traditional DISE relies on visual estimation, leading to reporting variability. Physicians lack objective
+                tools to standardize therapeutic planning across different clinicians.</p>
+            <div class="metric-box">
+                <div class="metric"><span class="metric-value">0</span><span class="metric-label">Subjective
+                        Standards</span></div>
+                <div class="metric"><span class="metric-value">High</span><span class="metric-label">Diagnosis
+                        Variance</span></div>
+            </div>
+        </section>
+
+        <!-- 3. Target Users -->
+        <section>
+            <h2>Designed for Specialists</h2>
+            <p>Empowering those who demand precision in sleep airway analysis.</p>
+            <ul>
+                <li><strong>ENT Physicians</strong>: Standardized preoperative & diagnostic assessments.</li>
+                <li><strong>Sleep Specialists</strong>: Quantitative data for therapeutic device selection.</li>
+                <li><strong>Medical Researchers</strong>: High-fidelity coordinate data for airway dynamics.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Success Goals (KPIs) -->
+        <section>
+            <h2>Measurable Impact</h2>
+            <div class="flow-grid" style="max-width: 800px;">
+                <div class="flow-card">
+                    <h3>Efficiency</h3>
+                    <p>Reduce quantitative video review time by <strong>70%</strong>.</p>
+                </div>
+                <div class="flow-card">
+                    <h3>Consistency</h3>
+                    <p>Standardized severity reporting via objective <strong>VOTE grading</strong>.</p>
+                </div>
+                <div class="flow-card">
+                    <h3>Accuracy</h3>
+                    <p>High-fidelity data foundations for surgical & non-surgical evaluation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. User Flow -->
+        <section>
+            <h2>Examination Workflow</h2>
+            <div class="flow-grid">
+                <div class="flow-card">
+                    <h3>01. Ingestion</h3>
+                    <p>Upload endoscopic MP4 recording.</p>
+                </div>
+                <div class="flow-card">
+                    <h3>02. Scope</h3>
+                    <p>Define a 10s-90s analysis window.</p>
+                </div>
+                <div class="flow-card">
+                    <h3>03. Selection</h3>
+                    <p>Filter focus to Velum (V) or Oropharynx (O).</p>
+                </div>
+                <div class="flow-card">
+                    <h3>04. Scan</h3>
+                    <p>Automated lumen segmentation & area calculation.</p>
+                </div>
+                <div class="flow-card">
+                    <h3>05. Validate</h3>
+                    <p>Review & optional manual anchor correction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. VOTE Standards -->
+        <section>
+            <h2>VOTE Grading Engine</h2>
+            <p>Universal severity mapping based on cross-sectional area reduction.</p>
+            <div class="flow-grid" style="max-width: 900px;">
+                <div class="flow-card">
+                    <h3>Level 0</h3>
+                    <p><strong>&lt; 50%</strong>: Normal or mild obstruction.</p>
+                </div>
+                <div class="flow-card">
+                    <h3>Level 1</h3>
+                    <p><strong>50 - 75%</strong>: Moderate obstruction.</p>
+                </div>
+                <div class="flow-card">
+                    <h3>Level 2</h3>
+                    <p><strong>&gt; 75%</strong>: Severe airway obstruction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. User Stories -->
+        <section>
+            <h2>Human-in-the-Loop</h2>
+            <div style="text-align: left; max-width: 700px;">
+                <p style="font-style: italic; border-left: 4px solid var(--accent); padding-left: 20px;">"As a
+                    Physician, I want the AI to calculate the exact VOTE score automatically, so that I have an
+                    objective metric for patient diagnosis."</p>
+                <p style="font-style: italic; border-left: 4px solid #cbd5e1; padding-left: 20px; margin-top: 30px;">"As
+                    a Specialist, I want to manually override polygons only when necessary, so that the final report
+                    remains 100% accurate."</p>
+            </div>
+        </section>
+
+        <!-- 8. Functional Requirements -->
+        <section>
+            <h2>Core Features</h2>
+            <ul>
+                <li><strong>U-Net Segmentation</strong>: Automated site-specific anatomical identification.</li>
+                <li><strong>Interactive Correction Loop</strong>: Real-time vertex manipulation toolset.</li>
+                <li><strong>Live Recalculation</strong>: Metric updates in <strong>&lt; 200ms</strong> after anchor
+                    adjustment.</li>
+            </ul>
+        </section>
+
+        <!-- 9. Technical Constraints -->
+        <section>
+            <h2>Standards & Limits</h2>
+            <div class="flow-grid" style="max-width: 700px;">
+                <div class="flow-card">
+                    <h3>Timeframe</h3>
+                    <p>10s Min / 90s Max per analysis segment.</p>
+                </div>
+                <div class="flow-card">
+                    <h3>Security</h3>
+                    <p>Medical-grade AES-256 encryption for all data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Edge Cases -->
+        <section>
+            <h2>Reliability</h2>
+            <p>Handling clinical variance with intelligent safeguards.</p>
+            <ul>
+                <li><strong>Occluded View</strong>: Automated identification of "Landmark Loss" with manual ROI
+                    fallback.</li>
+                <li><strong>Artifact Rejection</strong>: Filtering noise from mucous or lens blur.</li>
+            </ul>
+        </section>
+
+        <!-- 11. Out of Scope -->
+        <section>
+            <h2>Development Scope (V1)</h2>
+            <p>Maintaining focus on core diagnostic reliability.</p>
+            <ul>
+                <li>No real-time live video streaming.</li>
+                <li>No automated clinical billing/coding generation.</li>
+                <li>No cross-institutional longitudinal database.</li>
+            </ul>
+        </section>
+
+        <!-- 12. Thank You -->
+        <section>
+            <h1 style="color: var(--accent);">Thank You</h1>
+            <p>Empowering Otolaryngologists with Quantitative Clinical Intelligence.</p>
+            <p style="font-size: 16px; margin-top: 40px;">DISE AI Agent • PRD Submission v1.0</p>
+        </section>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const hint = document.querySelector('.hint');
+        container.addEventListener('scroll', () => {
+            const isAtBottom = container.scrollHeight - container.scrollTop <= container.clientHeight + 50;
+            hint.style.display = isAtBottom ? 'none' : 'block';
+        });
+    </script>
+</body>
+
+</html>
