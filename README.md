@@ -67,22 +67,24 @@ This project defines a complete automation pipeline from "Ideation" to "Engineer
 graph TD
     %% Node Definitions
     Idea["Raw Idea"]
-    Generator["PRD Generator (SKILL.md)"]
-    StandardPRD["Standard PRD Document"]
-    JiraSkill["Jira Automation Protocol (automation/SKILL.md)"]
+    Generator["SkillPRD Brain"]
+    StandardPRD["Standard PRD"]
+    JiraSkill["Automation Protocol"]
     JSON["Jira JSON Payload"]
-    Jira["Jira Kanban Board (Epic/Stories/Tasks)"]
+    Jira["Jira Task Board"]
 
     %% Flow
-    Idea -->|Intake Check| Generator
+    Idea -->|Input| Generator
     Generator -->|Natural Language| StandardPRD
-    StandardPRD -->|Input for translation| JiraSkill
+    StandardPRD -->|Transform| JiraSkill
     JiraSkill -->|Structured Data| JSON
-    JSON -->|API or Manual Import| Jira
+    JSON -->|Bulk Import| Jira
 
     %% Styling
     style Generator fill:#3b82f6,stroke:#fff,stroke-width:2px,color:#fff
     style JiraSkill fill:#10b981,stroke:#fff,stroke-width:2px,color:#fff
-    style StandardPRD fill:#f59e0b,stroke:#333
-    style JSON fill:#8b5cf6,stroke:#fff,color:#fff
+    style StandardPRD fill:#f59e0b,stroke:#fff,stroke-width:2px,color:#fff
+    style JSON fill:#8b5cf6,stroke:#fff,stroke-width:2px,color:#fff
+    style Jira fill:#475569,stroke:#fff,stroke-width:2px,color:#fff
+    style Idea fill:#64748b,stroke:#fff,stroke-width:2px,color:#fff
 ```
