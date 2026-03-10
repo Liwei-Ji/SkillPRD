@@ -41,6 +41,11 @@ If you are using developer-focused AI tools:
 ### 4. Shared URL
 Since the project is on GitHub, you can provide the **Raw URL** of `SKILL.md` to any tool that supports web fetching or browsing.
 
+### 5. Google Antigravity (Native Skills)
+If you are using **Google Antigravity**, this directory is already a fully compliant, native Skill package.
+- The Antigravity Agent will automatically detect the `SKILL.md` file (thanks to its YAML frontmatter).
+- Simply ask the agent to act as the "PRD Architect" or reference this folder, and it will run the skill's logic systemically.
+
 ## File Structure
 - `SKILL.md`: The core AI instruction set (Grandmaster Brain).
 - `input.yaml`: Blank template with example comments for providing product data.
