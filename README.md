@@ -20,7 +20,7 @@ A specialized **PRD Skill** to transform raw ideas into implementation-ready Pro
     - **Target 4: Interactive Pitch Deck for Investors** (HTML) - High-impact, 12-slide presentation with advanced UI components.
 
 ## How to Use with Other AIs
-Once this project is hosted on GitHub, different AI interfaces can consume the **PRD-Generator** Skill in the following ways:
+Once this project is hosted on GitHub, different AI interfaces can consume the **SkillPRD** in the following ways:
 
 ### 1. Direct Chat (Gemini, Claude, ChatGPT)
 The simplest way to "install" the skill is to copy the entire content of `SKILL.md` and paste it into a new chat session.
